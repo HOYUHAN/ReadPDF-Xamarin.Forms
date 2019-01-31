@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSampleApp.Pages.ReadPdfPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:XFSampleApp.ViewModels"
+    Title="Read PDF">
+    <ContentPage.BindingContext>
+        <viewmodels:ReadPdfPageViewModel x:Name="readPdfPageViewModel" />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <WebView
+                HorizontalOptions="FillAndExpand"
+                Source="{Binding PdfSource}"
+                VerticalOptions="FillAndExpand" />
+            <ActivityIndicator
+                HorizontalOptions="CenterAndExpand"
+                IsRunning="{Binding IsDownloading}"
+                IsVisible="{Binding IsDownloading}"
+                VerticalOptions="CenterAndExpand"
+                Color="Orange" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

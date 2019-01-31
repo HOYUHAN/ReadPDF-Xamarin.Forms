@@ -11,7 +11,7 @@ namespace XFSampleApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Pages.MainPage());
         }
 
         protected override void OnStart()
