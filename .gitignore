@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs
+/XFSampleApp/XFSampleApp/obj
+/XFSampleApp/XFSampleApp.Android/obj
